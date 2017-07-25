@@ -34,7 +34,7 @@ class RPS
     if @user_input == @computer_input
         puts "平手"
     else
-        case @user_input 
+        case @user_input
         when "S" then puts (@computer_input == "R") ? @name + " 出剪刀(S)，電腦出石頭(R)，電腦贏！" :  @name + " 出剪刀(S)，電腦出布(P)， " + @name + " 贏！"
         when "R" then puts (@computer_input == "P") ? @name + " 出石頭(R)，電腦出布(P)，電腦贏！" :  @name + " 出石頭(R)，電腦出剪刀(S)， " + @name + " 贏！" 
         when "P" then puts (@computer_input == "S") ? @name + " 出布(P)，電腦出剪刀(S)，電腦贏！" :  @name + " 出布(P)，電腦出石頭(R)， " + @name + " 贏！"
@@ -43,7 +43,7 @@ class RPS
 
   def get_player_gestures
     #取得玩家和電腦兩個物件的
-    puts @name+" 的選擇：剪刀(S)、石頭(R)、布(P)"
+    puts @name +" 的選擇：剪刀(S)、石頭(R)、布(P)"
     human = Human.new(@name)
     @user_input = human.get_gesture
     computer = Computer.new(computer)
